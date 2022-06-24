@@ -1,0 +1,23 @@
+package com.project.quanlybanhang_api.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.project.quanlybanhang_api.entity.Staff;
+
+@Transactional
+@Service
+public class StaffService implements StaffServiceImp{
+
+	@Autowired
+	StaffServiceImp staffServiceImp;
+	@Override
+	public List<Staff> getAllStaff() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

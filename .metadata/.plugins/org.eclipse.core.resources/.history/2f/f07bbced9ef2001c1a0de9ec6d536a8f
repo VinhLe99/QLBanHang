@@ -1,0 +1,40 @@
+package com.project.quanlybanhang_api.entity;
+
+import java.util.Date;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity( name = "Customer")
+public class Customer {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column( name = "customerName")
+	private String customerName;
+	
+	@Column( name = "phoneNumber")
+	private int phoneNumber;
+	
+	@Column( name = "customerAddress")
+	private String customerAddress;
+	
+	@Column( name = "gender")
+	private int gender;
+	
+	@Column( name = "birthOfDay")
+	private Date birthOfDay;
+	
+	@Column( name = "Status")
+	private int Status;
+	
+	@OneToMany(mappedBy = "Customer")
+	private Set<Cart> cart;
+}

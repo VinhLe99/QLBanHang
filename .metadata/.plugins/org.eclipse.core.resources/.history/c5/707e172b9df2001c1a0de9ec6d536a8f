@@ -1,0 +1,106 @@
+package com.project.quanlybanhang_api.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+@Entity( name = "Staff")
+public class Staff {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column( name = "staffName")
+	private String staffName;
+	
+	@Column( name = "age")
+	private int age;
+	
+	@Column( name = "phoneNumber")
+	private int phoneNumber;
+	
+	@Column( name = "email")
+	private String email;
+	
+	@Column( name = "staffAddress")
+	private String staffAddress;
+	
+	@Column( name = "gender")
+	private int gender;
+	
+	@Column( name = "birthOfDay")
+	private Date birthOfDay;
+	
+	@OneToOne
+	@JoinColumn(name = "roleID")
+	private Role role;
+
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getStaffName() {
+		return staffName;
+	}
+	public void setStaffName(String staffName) {
+		this.staffName = staffName;
+	}
+
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public int getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(int phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getStaffAddress() {
+		return staffAddress;
+	}
+	public void setStaffAddress(String staffAddress) {
+		this.staffAddress = staffAddress;
+	}
+
+	public int getGender() {
+		return gender;
+	}
+	public void setGender(int gender) {
+		this.gender = gender;
+	}
+
+	public Date getBirthOfDay() {
+		return birthOfDay;
+	}
+	public void setBirthOfDay(Date birthOfDay) {
+		this.birthOfDay = birthOfDay;
+	}
+	public Role getRole() {
+		return role;
+	}
+	public void setRole(Role role) {
+		this.role = role;
+	}
+}

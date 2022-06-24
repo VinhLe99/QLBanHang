@@ -1,0 +1,93 @@
+package com.project.quanlybanhang_api.entity;
+
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity( name = "product")
+public class Product {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column( name = "product_name")
+	private String productname;
+	
+	@Column( name = "product_avatar")
+	private String productavatar;
+	
+	@Column( name = "product_price")
+	private float productprice;
+	
+	@Column( name = "produc_type")
+	private int productype;
+	
+	@Column( name = "productDescription")
+	private String productDescription;
+	
+	@OneToMany(mappedBy = "Product")
+	private Set<Cart> cart;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public String getProductAvatar() {
+		return productAvatar;
+	}
+
+	public void setProductAvatar(String productAvatar) {
+		this.productAvatar = productAvatar;
+	}
+
+	public float getProductPrice() {
+		return productPrice;
+	}
+
+	public void setProductPrice(float productPrice) {
+		this.productPrice = productPrice;
+	}
+
+	public int getProducType() {
+		return producType;
+	}
+
+	public void setProducType(int producType) {
+		this.producType = producType;
+	}
+
+	public String getProductDescription() {
+		return productDescription;
+	}
+
+	public void setProductDescription(String productDescription) {
+		this.productDescription = productDescription;
+	}
+
+	public Set<Cart> getCart() {
+		return cart;
+	}
+
+	public void setCart(Set<Cart> cart) {
+		this.cart = cart;
+	}
+	
+}

@@ -1,0 +1,10 @@
+package com.project.quanlybanhang_api.services;
+
+import java.util.List;
+import java.util.Map;
+
+
+public interface StaffServiceImp {
+
+	public List<Map<String, ?>> getAllStaff();
+}

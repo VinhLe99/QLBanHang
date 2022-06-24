@@ -1,0 +1,41 @@
+package com.project.quanlybanhang_api.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity( name = "staff")
+public class Staff {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column( name = "staffName")
+	private String staffname;
+	
+	@Column( name = "age")
+	private int age;
+	
+	@Column( name = "phoneNumber")
+	private int phonenumber;
+	
+	@Column( name = "email")
+	private String email;
+	
+	@Column( name = "staffAddress")
+	private String staffaddress;
+	
+	@Column( name = "gender")
+	private int gender;
+	
+	@Column( name = "birthOfDay")
+	private Date birthOfDay;
+	
+	@Column( name = "roleID")
+	private int roleID;
+}

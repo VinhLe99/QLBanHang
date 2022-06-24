@@ -1,0 +1,47 @@
+package com.project.quanlybanhang_api.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity( name = "Role")
+public class Role {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@OneToOne(mappedBy = "Role")
+	private Staff staff;
+	
+	@Column( name = "descreption")
+	private String descreption;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Staff getStaff() {
+		return staff;
+	}
+
+	public void setStaff(Staff staff) {
+		this.staff = staff;
+	}
+
+	public String getDescreption() {
+		return descreption;
+	}
+
+	public void setDescreption(String descreption) {
+		this.descreption = descreption;
+	}
+	
+}

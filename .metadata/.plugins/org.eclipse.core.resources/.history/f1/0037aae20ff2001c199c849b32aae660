@@ -1,0 +1,9 @@
+package com.project.quanlybanhang_api.entity;
+
+
+public class Staff {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+}

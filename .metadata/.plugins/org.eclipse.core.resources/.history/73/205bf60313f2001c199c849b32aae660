@@ -1,0 +1,6 @@
+package com.project.quanlybanhang_api.entity;
+
+public class Role {
+
+	
+}

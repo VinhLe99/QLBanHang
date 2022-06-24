@@ -1,0 +1,28 @@
+package com.project.quanlybanhang_api.entity;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class Product {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column( name = "productName")
+	private String productName;
+	
+	@Column( name = "productAvatar")
+	private String productAvatar;
+	
+	@Column( name = "productPrice")
+	private float productPrice;
+	
+	@Column( name = "producType")
+	private int producType;
+	
+	@Column( name = "productDescription")
+	private String productDescription;
+}

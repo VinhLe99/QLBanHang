@@ -1,0 +1,11 @@
+package com.project.quanlybanhang_api.services;
+
+import java.util.List;
+
+import com.project.quanlybanhang_api.entity.Role;
+import com.project.quanlybanhang_api.entity.Staff;
+
+public interface StaffServiceImp {
+
+	public List<Role> getAllStaff();
+}

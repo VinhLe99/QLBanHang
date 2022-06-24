@@ -1,0 +1,9 @@
+package com.project.quanlybanhang_api.respository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.project.quanlybanhang_api.entity.Staff;
+
+public interface StaffRespository extends JpaRepository<Staff, Integer>{
+
+}

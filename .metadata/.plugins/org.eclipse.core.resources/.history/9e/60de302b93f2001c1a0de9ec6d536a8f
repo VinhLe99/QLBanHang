@@ -1,0 +1,25 @@
+package com.project.quanlybanhang_api.entity;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class CartDetail {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column( name = "customerName")
+	private String customerName;
+	
+	@Column( name = "phoneNumber")
+	private int phoneNumber;
+	
+	@Column( name = "customerAddress")
+	private String customerAddress;
+	
+	@Column( name = "gender")
+	private int gender;
+}
